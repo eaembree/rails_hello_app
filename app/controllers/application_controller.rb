@@ -4,6 +4,12 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def hello
-  	render text: "hello, world!"
+  	#Appearently, can't have more than 1 render call?
+  	#render text: "hello, world!"
+  	render text: "&#161hola, mundo!"
+  end
+
+  def goodbye
+  	render text: "goodbye!"
   end
 end
